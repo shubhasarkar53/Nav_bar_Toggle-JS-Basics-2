@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+    
+}
+nav{
+    width: 100%;
+    height: auto;
+    padding: 0.5em 1em;
+    /* border: 1px solid olive; */
+    background-color: aliceblue;
+   
+}
+.center{
+    width: 95%;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    /* transition: all 1s ease-in ;
+    transform-origin: bottom; */
+}
+
+.nav-header{
+    /* border: 2px solid rgb(0, 255, 81); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.toggle-btn{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.list-container{
+    display: none;
+    list-style: none
+}
+
+.list-container.active{
+    display: block;
+}
+
+.list{
+    /* box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.048); */
+    cursor: pointer;
+   margin: 0.4em 0;
+  
+}
+.list-container a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+.list-container a:hover{
+    color: black;
+     
+}
+.social-icons-container{
+    display: none;
+}
+
+@media(min-width:768px){
+    .list-container{
+         display: flex;
+         gap: 1em;
+         font-weight: 500;
+    }
+    .toggle-btn{
+        display: none;
+    }
+    .center{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .social-icons-container{
+        font-size: 1.3em;
+        display: flex;
+        gap: 1em;
+        cursor: pointer;
+    }
+    .social-icons-container .fa-brands:hover{
+        transform: scale(103%);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.048);
+    }
+
+    .logo{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
